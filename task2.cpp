@@ -1,14 +1,10 @@
 #include<iostream>
 #include<stdlib.h>
 using namespace std;
-//array for the board which will be visible in the console
 char board[3][3]={{'1','2','3'},{'4','5','6'},{'7','8','9'}};
-//char name1,name2;
 int choice,row,col,i,j;
 char turn = 'X';
 bool draw = false;
-
-//this function will show the current status of the board
 
 void display_board()
 {
@@ -23,7 +19,6 @@ void display_board()
     cout<<"\t\t  "<<board[2][0]<<" |  "<<board[2][1]<<"   |  "<<board[2][2]<<" \n";
     cout<<"\t\t__________________\n";
 }
-//this function will get the input of the player and update the board
 
 void player_turn()
 {
@@ -35,7 +30,7 @@ void player_turn()
     }
 
     cin>>choice;
-    //using switch case to update which row or column would be
+
     switch(choice)
     {
         case 1 : row=0; col=0;
@@ -76,8 +71,6 @@ void player_turn()
     display_board();
 
 }
-
-//FUNCTION FOR DISPLAYING THE STATUS
 
 bool gameover()
 {
